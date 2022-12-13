@@ -1,6 +1,8 @@
 {
   "resources": [
-    {"id":{"name":"Object1","path":"objects/Object1/Object1.yy",},"order":0,},
+    {"id":{"name":"fntUI_Default","path":"fonts/fntUI_Default/fntUI_Default.yy",},"order":0,},
+    {"id":{"name":"Resources_Bar","path":"sprites/Resources_Bar/Resources_Bar.yy",},"order":0,},
+    {"id":{"name":"gameUI","path":"objects/gameUI/gameUI.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
