@@ -23,6 +23,9 @@ var villager = collision_rectangle(mouse_start_x, mouse_start_y, mouse_end_x, mo
 
 if (villager && active)
 {
-	villager.Selected = true;
-	villager = collision_rectangle(mouse_start_x, mouse_start_y, mouse_end_x, mouse_end_y,Par_Villager,false,false);
+	if (villager.task == TASK_NONE)
+	{
+		villager.Selected = true;
+		villager = collision_rectangle(mouse_start_x, mouse_start_y, mouse_end_x, mouse_end_y,Par_Villager,false,false);
+	}
 }
