@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+myhut = noone;
+
+gotohut = false;
+
 enum dir{
 	Left, Right, Up, Down
 }
@@ -21,4 +25,4 @@ alarm[1] = 30;
 
 hunger = 0;
 
-name = choose(choose("Bob","Tumor","Rapist","Racist","Black Death","luuk","Paul","Pim"),"Gary","Stephanie","Mara","Bomber","Cancer","Krebs","Gaymer","LGBTQ+WAPPIE","The Wok","James","Black Jack");
+Name = choose(choose("Bob","Paul","Ben", "Luc"),"Gary","Stephanie","Mara","Bomber","The Wok","James","Black Jack");

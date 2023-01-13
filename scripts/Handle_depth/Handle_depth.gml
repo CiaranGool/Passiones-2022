@@ -13,4 +13,16 @@ function Handle_depth(){
 				depth = n.depth-1;
 			}
 	}
+	var a = collision_circle(x,y,32,Par_animals,true,true)
+	if (a)
+	{
+		if (a.y>y)
+		{
+			depth = a.depth+1;
+		}
+		else
+			{
+				depth = a.depth-1;
+			}
+	}
 }

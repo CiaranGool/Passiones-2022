@@ -14,7 +14,7 @@ if (!busy)
 			task = TASK_SEARCHING;
 			busy = true;
 		}
-	switch (task)
+	/*switch (task) //Uncomment this when needed
 	{
 		case TASK_WOODCUTTING:
 			
@@ -39,6 +39,20 @@ if (!busy)
 		case TASK_FOODGATHERING:
 		
 		break;
+	}*/
+	var b = instance_nearest(x,y,bull);
+	if (b && point_distance(x,y,b.x,b.y) < 192)
+	{
+		var walking = mp_potential_step(bull.x+choose(64,-64),y+choose(64,-64),3,false);
+	if (!walking)
+		{
+				image_speed = 1;
+		}
+		else
+			{
+				image_speed = 0;
+				image_index = 0;
+			}
 	}
 	
 }
@@ -68,6 +82,8 @@ else
 				case Stone_0:
 				case Flint_0:
 				case BerryBush_0:
+				case Deer_0:
+				case Monkey_0:
 						mp_potential_step(interest.x,interest.y,2,false);
 
 						if (point_distance(x,y,interest.x,interest.y) < 16)
@@ -84,6 +100,10 @@ else
 								task = TASK_FLINTGATHERING;
 								break;
 								case BerryBush_0:
+								task = TASK_FOODGATHERING;
+								break;
+								case Deer_0:
+								case Monkey_0:
 								task = TASK_FOODGATHERING;
 								break;
 							}
@@ -113,20 +133,21 @@ if (task == TASK_SEARCHING)
 
 if (task == TASK_NONE)
 {
-	mp_potential_step(targetloc_x,targetloc_y,2,false);
+	var walking = mp_potential_step(targetloc_x,targetloc_y,2,false);
+	if (!walking)
+		{
+				image_speed = 1;
+		}
+		else
+			{
+				image_speed = 0;
+				image_index = 0;
+			}
 }
 
 // Die from hunger
 
 if(hunger>200){
-	if (global.food_count>0)
-	{
-		global.food_count--;
-		hunger = 0;
-	}
-	else
-		{
 			instance_destroy()
-			show_message_async(name + " Has died from GOD")
-		}
+			show_message_async(Name + choose(" has died from hunger"," has reached heaven by fasting", " has collapsed from hunger"));
 }

@@ -1,0 +1,1 @@
+global.Housing_count--;

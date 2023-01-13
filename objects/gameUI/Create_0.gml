@@ -15,3 +15,6 @@ global.hide_count = 0;
 global.flint_count= 0;
 global.wood_count = 0;
 global.stone_count = 0;
+global.Housing_count = 0;
+
+alarm[0] = 30;
