@@ -25,4 +25,4 @@ alarm[1] = 30;
 
 hunger = 0;
 
-Name = choose(choose("Bob","Paul","Ben", "Luc"),"Gary","Stephanie","Mara","Bomber","The Wok","James","Black Jack");
+Name = choose(choose("Bob","Paul","Ben", "Luc"),"Gary","Stephanie","Mara","Bomber","The Wok","James","Black Jack","Bühler");

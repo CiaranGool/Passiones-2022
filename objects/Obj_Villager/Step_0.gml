@@ -113,6 +113,7 @@ else
 						}
 				break;
 				case Obj_Villager:
+				case Bush:
 				task = TASK_NONE;
 				busy = false;
 				break;
@@ -151,4 +152,10 @@ if (task == TASK_NONE)
 if(hunger>200){
 			instance_destroy()
 			show_message_async(Name + choose(" has died from hunger"," has reached heaven by fasting", " has collapsed from hunger"));
+}
+
+if (global.food_count>0 && hunger > 180)
+{
+	global.food_count--;
+	hunger = 0;
 }

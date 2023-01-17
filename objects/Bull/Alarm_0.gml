@@ -2,9 +2,9 @@ alarm[0] = 60;
 
 if (!attack)
 {
-	if (house)
+	if (instance_exists(house) && chance(8))
 	{
-		targetloc_x = house.y;
+		targetloc_x = house.x;
 		targetloc_y = house.y;
 	}
 	else

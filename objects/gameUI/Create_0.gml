@@ -17,6 +17,8 @@ global.wood_count = 0;
 global.stone_count = 0;
 global.Housing_count = 0;
 
+global.lines = false;
+
 alarm[0] = 30;
 
 factor = 1;

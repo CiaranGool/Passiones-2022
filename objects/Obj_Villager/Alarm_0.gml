@@ -4,13 +4,13 @@ if (!gotohut)
 	targetloc_x = x+choose(random(128),-random(128));
 	targetloc_y = y+choose(random(128),-random(128));
 }
-else
+else if (instance_exists(myhut))
 	{
 			targetloc_x = myhut.x;
 			targetloc_y = myhut.y;
 	}
 
-if (myhut)
+if (instance_exists(myhut))
 {
 	if (chance(3))
 	{
