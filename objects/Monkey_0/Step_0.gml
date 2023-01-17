@@ -1,7 +1,9 @@
 //©Roderick F 2023
 var vil = instance_nearest(x,y,Obj_Villager);
 #region stealing
-if (point_distance(x,y,vil.x,vil.y) < 64 && chance(8) && goods < 1) //Steal something if close to villager and when no goods have been stolen
+if (vil)
+{
+	if (point_distance(x,y,vil.x,vil.y) < 64 && chance(8) && goods < 1) //Steal something if close to villager and when no goods have been stolen
 {
 switch (mystealtype) //Check wether the goods can be stolen.
 	{
@@ -47,6 +49,7 @@ switch (mystealtype) //Check wether the goods can be stolen.
 		break;
 	}
 }
+}
 #endregion
 //walking
 if (!stealing && !fleeing)
@@ -67,6 +70,8 @@ else
 	walk(2);
 }
 //Fleeing
+if (vil)
+{
 if (point_distance(x,y,vil.x,vil.y) < 64 && goods>0)
 {
 	stealing = false;
@@ -87,6 +92,7 @@ if (stealing && point_distance(x,y,vil.x,vil.y) < 64 && !vil.busy)
 {
 	targetloc_x = vil.x;
 	targetloc_y = vil.y;
+}
 }
 
 //Resource related

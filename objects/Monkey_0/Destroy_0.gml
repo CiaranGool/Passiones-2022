@@ -3,7 +3,6 @@ var p = instance_nearest(x,y,Obj_Villager);
 
 if (point_distance(x,y,p.x,p.y) < 96)
 {
-	global.hide_count+=2;
 	if (goods)
 	{
 		switch (stolentype)
@@ -22,4 +21,10 @@ if (point_distance(x,y,p.x,p.y) < 96)
 			break;
 		}
 	}
+}
+
+instance_create_depth(x,y,depth,ResHide);
+if (chance(8))
+{
+	instance_create_depth(x-32,y,depth,ResFood);
 }

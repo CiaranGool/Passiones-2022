@@ -18,3 +18,5 @@ global.stone_count = 0;
 global.Housing_count = 0;
 
 alarm[0] = 30;
+
+factor = 1;

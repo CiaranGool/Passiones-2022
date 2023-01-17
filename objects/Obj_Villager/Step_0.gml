@@ -40,10 +40,10 @@ if (!busy)
 		
 		break;
 	}*/
-	var b = instance_nearest(x,y,bull);
+	var b = instance_nearest(x,y,Bull);
 	if (b && point_distance(x,y,b.x,b.y) < 192)
 	{
-		var walking = mp_potential_step(bull.x+choose(64,-64),y+choose(64,-64),3,false);
+		var walking = mp_potential_step(Bull.x+choose(64,-64),y+choose(64,-64),3,false);
 	if (!walking)
 		{
 				image_speed = 1;
@@ -106,6 +106,7 @@ else
 								case Monkey_0:
 								task = TASK_FOODGATHERING;
 								break;
+								
 							}
 							interest.cutting++;
 							Selected = false;

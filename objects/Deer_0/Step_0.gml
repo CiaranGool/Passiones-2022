@@ -1,14 +1,15 @@
 var vil = instance_nearest(x,y,Obj_Villager);
-
-if (point_distance(x,y,vil.x,vil.y) < 192 && chance(8))
+if (vil)
 {
-	fleeing = true;
-}
-else
+	if (point_distance(x,y,vil.x,vil.y) < 192 && chance(8))
 	{
-		fleeing = false;
+		fleeing = true;
 	}
-	
+	else
+		{
+			fleeing = false;
+		}
+}
 walk(4);
 
 Handle_depth();

@@ -1,6 +1,10 @@
-var p = instance_nearest(x,y,Obj_Villager);
-
-if (point_distance(x,y,p.x,p.y) < 96)
+instance_create_depth(x,y,depth,ResHide);
+instance_create_depth(x+16,y,depth,ResFood);
+if (chance(8))
 {
-	global.hide_count+=5;
+	instance_create_depth(x-32,y,depth,ResHide);
+	if (chance(2))
+	{
+		instance_create_depth(x+32,y,depth,ResHide);
+	}
 }

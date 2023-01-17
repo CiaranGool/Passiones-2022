@@ -1,4 +1,4 @@
-if (instance_number(bull) < 72)
+if (instance_number(Bull) < 72)
 {
-	spawn_things(bull,19200)
+	spawn_things(Bull,19200)
 }

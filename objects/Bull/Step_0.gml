@@ -1,15 +1,17 @@
 var vil = instance_nearest(x,y,Obj_Villager);
 
 house = instance_nearest(x,y,Hut_0);
-
-if (point_distance(x,y,vil.x,vil.y) < 192 && chance(16))
+if (vil)
 {
-	attack = true;
-}
-else
+	if (point_distance(x,y,vil.x,vil.y) < 192 && chance(16))
 	{
-		attack = false;
+		attack = true;
 	}
+	else
+		{
+			attack = false;
+		}
+}
 	
 if (!attack)
 {

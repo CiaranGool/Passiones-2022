@@ -10,7 +10,7 @@ else
 		cobject = selectionobj;
 		with (Obj_Villager)
 		{
-			if (Selected)
+			if (Selected && !busy)
 			{
 				interest = cobject;
 			}

@@ -14,6 +14,8 @@ whatiwant = 0;
 
 mystealtype = 0;
 
+woodsprite = choose(0,1);
+
 enum stealtype {
 	food,
 	wood,
