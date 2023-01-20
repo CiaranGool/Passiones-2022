@@ -1,3 +1,5 @@
+/// @description Movement of the element
+//Chance for bull to attack a house
 var vil = instance_nearest(x,y,Obj_Villager);
 
 house = instance_nearest(x,y,Hut_0);
@@ -8,6 +10,7 @@ if (house)
 		with (house) {instance_destroy();}
 	}
 }
+//Chance of attacking a villager
 if (vil)
 {
 	if (point_distance(x,y,vil.x,vil.y) < 192 && chance(16))
@@ -19,7 +22,7 @@ if (vil)
 			attack = false;
 		}
 }
-	
+//Movement when the bull is idle	
 if (!attack)
 {
 	walk(3);
@@ -30,7 +33,7 @@ else
 	}
 
 Handle_depth();
-
+//Death of the bull
 if (hp<1)
 {
 	instance_destroy();

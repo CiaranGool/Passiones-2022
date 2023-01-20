@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Object selection
+//Assign villagers to objects
 selectionobj = collision_point(mouse_x,mouse_y,all,true,true);
 if (!selectionobj && selectionobj !=Obj_Villager)
 {

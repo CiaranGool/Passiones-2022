@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Tutorial
+//Game info messagebox
 if (room == Room1)
 {
 window_set_caption("Game Tutorial")

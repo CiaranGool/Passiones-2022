@@ -1,4 +1,4 @@
-/// @desc handle shaking
+/// @desc Handle shaking
 Handle_depth();
 n+=30;
 if (n>360)

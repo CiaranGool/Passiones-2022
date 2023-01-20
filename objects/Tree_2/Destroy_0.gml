@@ -1,4 +1,5 @@
-/// @description gathering resources
+/// @description Gathering resources
+//Random amount of bundles
 instance_create_depth(x,y,depth,ResWood);
 if (chance(3))
 {

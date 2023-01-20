@@ -1,4 +1,4 @@
-/// @description Draw selection
+/// @description Mouse draw selection
 if (active)
 {
 	draw_set_alpha(.5);

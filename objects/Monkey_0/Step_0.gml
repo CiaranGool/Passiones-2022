@@ -1,6 +1,7 @@
+/// @description Movement and interaction
 //©Roderick F 2023
 var vil = instance_nearest(x,y,Obj_Villager);
-#region stealing
+#region Stealing
 if (vil)
 {
 	if (point_distance(x,y,vil.x,vil.y) < 64 && chance(8) && goods < 1) //Steal something if close to villager and when no goods have been stolen
@@ -81,7 +82,7 @@ else
 	{
 		fleeing = false;
 	}
-//get point depending on state.
+//Get point depending on state.
 if (fleeing)
 {
 	targetloc_x = vil.x + xoffset;

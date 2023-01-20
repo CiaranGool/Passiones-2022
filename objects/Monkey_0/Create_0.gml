@@ -1,3 +1,4 @@
+/// @description Init
 //©Roderick F 2023
 stealing = false;
 fleeing = false;

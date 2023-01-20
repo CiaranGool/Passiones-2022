@@ -1,3 +1,4 @@
+/// @description Growing of bush
 instance_create_depth(x,y,depth,BerryBush_0);
 if (chance(2))
 {

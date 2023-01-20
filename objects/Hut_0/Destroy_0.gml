@@ -1,1 +1,1 @@
-global.Housing_count--;
+global.Housing_count-=2;

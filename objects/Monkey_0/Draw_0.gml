@@ -1,4 +1,6 @@
+/// @description Draw sprite on top of ape
 draw_self();
+//Sprite above ape depending on stolen goods
 if (goods>0)
 {
 	switch (stolentype)

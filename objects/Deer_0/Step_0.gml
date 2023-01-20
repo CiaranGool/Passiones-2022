@@ -1,3 +1,5 @@
+/// @description Movement and interaction of the element
+//Chance for fleeing from villager
 var vil = instance_nearest(x,y,Obj_Villager);
 if (vil)
 {
@@ -18,7 +20,7 @@ if (n>360)
 {
 	n = 0;
 }
-
+//Kill animation
 if (shaking)
 {
 	x += .25*sin(degtorad(n));

@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Camera handling
 /*
 |©Roderick F 2023
 | Met toestemming gebruikt.

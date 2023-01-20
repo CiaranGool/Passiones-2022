@@ -1,5 +1,5 @@
 /// @description AI
-
+//Check if not on task
 if (!busy)
 {
 	if (
@@ -14,32 +14,7 @@ if (!busy)
 			task = TASK_SEARCHING;
 			busy = true;
 		}
-	/*switch (task) //Uncomment this when needed
-	{
-		case TASK_WOODCUTTING:
-			
-		break;
-		
-		case TASK_STONEGATHERING:
-		
-		break;
-		
-		case TASK_SKINNING:
-		
-		break;
-		
-		case TASK_FLINTGATHERING:
-		
-		break;
-		
-		case TASK_SEARCHING:
-		
-		break;
-		
-		case TASK_FOODGATHERING:
-		
-		break;
-	}*/
+	//Chance to flee from bull	
 	var b = instance_nearest(x,y,Bull);
 	if (b && point_distance(x,y,b.x,b.y) < 192)
 	{
@@ -65,7 +40,7 @@ else
 		case TASK_SKINNING:
 		case TASK_FLINTGATHERING:
 		case TASK_FOODGATHERING:
-		if (!instance_exists(interest))
+		if (!instance_exists(interest)) //When object is removed, return to idle state and more hunger
 			{
 				task = TASK_NONE;
 				interest = noone;
@@ -76,7 +51,7 @@ else
 		case TASK_SEARCHING:
 		if (instance_exists(interest))
 		{
-			switch (interest.object_index)
+			switch (interest.object_index) //Deletion of objects when interacted
 			{
 				case Tree_2:
 				case Stone_0:
@@ -112,8 +87,10 @@ else
 							Selected = false;
 						}
 				break;
-				case Obj_Villager:
+				case Obj_Villager: //Return to idle state when interacted
 				case Bush:
+				case Tiger:
+				case Bull:
 				task = TASK_NONE;
 				busy = false;
 				break;
@@ -133,7 +110,7 @@ if (task == TASK_SEARCHING)
 	busy = true;
 }
 
-if (task == TASK_NONE)
+if (task == TASK_NONE) //Random movement when idle
 {
 	var walking = mp_potential_step(targetloc_x,targetloc_y,2,false);
 	if (!walking)

@@ -1,6 +1,6 @@
-/// @description Insert description here
+/// @description Deletion of element
 var p = instance_nearest(x,y,Obj_Villager);
-
+//Stealing items from the player when near enough
 if (point_distance(x,y,p.x,p.y) < 96)
 {
 	if (goods)
@@ -22,7 +22,7 @@ if (point_distance(x,y,p.x,p.y) < 96)
 		}
 	}
 }
-
+//Chance to drop food
 instance_create_depth(x,y,depth,ResHide);
 if (chance(8))
 {

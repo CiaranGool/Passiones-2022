@@ -1,5 +1,4 @@
 /// @description Init
-// You can write your code in this editor
 n = 0;
 shaking = false;
 hp = 5;

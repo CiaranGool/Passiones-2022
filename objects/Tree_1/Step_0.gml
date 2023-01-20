@@ -1,4 +1,4 @@
-/// @desc handle shaking
+/// @desc Handle shaking
 n+=45;
 if (n>360)
 {

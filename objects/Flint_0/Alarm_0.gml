@@ -1,3 +1,4 @@
+/// @description Stop shaking
 alarm[0] = 60;
 if (cutting>0)
 {

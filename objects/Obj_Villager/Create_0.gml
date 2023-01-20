@@ -1,6 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-
+/// @description Init
 myhut = noone;
 
 gotohut = false;
@@ -25,4 +23,4 @@ alarm[1] = 30;
 
 hunger = 0;
 
-Name = choose(choose("Bob","Paul","Ben", "Luc"),"Gary","Stephanie","Mara","Bomber","The Wok","James","Black Jack","Bühler");
+Name = choose(choose("Bob","Paul","Ben", "Luc","calor Giovanna","coral Giovanna","Delila forth"),"Gary","Stephanie","Mara","Bomber","The Wok","James","Black Jack","Bühler");

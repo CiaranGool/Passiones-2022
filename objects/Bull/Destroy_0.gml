@@ -1,4 +1,5 @@
-
+/// @description Deletion of element
+//Chance of dropping amount of bundles hide
 instance_create_depth(x,y,depth,ResHide);
 if (chance(3))
 {

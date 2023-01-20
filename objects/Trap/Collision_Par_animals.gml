@@ -1,5 +1,5 @@
 /// @description Insert description here
-// You can write your code in this editor
+//Remove hp from a Bull or Tiger on hit
 with (other) {
 	if (object_index == Bull || object_index == Tiger)
 	{
@@ -10,5 +10,5 @@ with (other) {
     instance_destroy();
 	}
 }
-
+//Deletion of trap
 instance_destroy();

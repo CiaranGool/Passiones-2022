@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Droprate of resources
+//Random amount of resources dropped for every type
 switch (object_index) {
     case ResFlint:
         global.flint_count +=irandom_range(4,8);

@@ -1,4 +1,6 @@
+/// @description Movement and interaction
 var vil = instance_nearest(x,y,Obj_Villager);
+//Chance to attack a villager
 if (vil)
 {
 	if (point_distance(x,y,vil.x,vil.y) < 192 && chance(6))
@@ -10,6 +12,7 @@ if (vil)
 			attack = false;
 		}
 }
+//Speed when not attacking
 if (!attack)
 {
 	walk(3);
